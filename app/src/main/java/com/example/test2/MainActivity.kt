@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             result.append("Group: $group\n")
         }
 
-        binding.count.text = "Groups: ${anagrams.size}"
+        binding.count.text = "Number of groups: ${anagrams.size}"
     }
 
     private fun isAnagram(text1: String, text2: String): Boolean {
