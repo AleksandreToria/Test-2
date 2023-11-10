@@ -1,5 +1,6 @@
 package com.example.test2
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.test2.databinding.ActivityMainBinding
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun showGroups() {
         val result = StringBuilder()
 
@@ -50,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             result.append("Group: $group\n")
         }
 
-        binding.count.text = "${anagrams.size}"
+        binding.count.text = "Groups: ${anagrams.size}"
     }
 
     private fun isAnagram(text1: String, text2: String): Boolean {
